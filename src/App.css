@@ -38,8 +38,8 @@
 }
 
 .post-container {
-  background: orchid;
   display: flex;
+  margin: 1rem;
   flex-flow: row nowrap;
 }
 .post-content-container {
@@ -47,11 +47,22 @@
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
+  margin-top: 1rem;
 }
 
-.display-photo {
+.photo-container {
   flex: 1 1 0;
+  max-width: 4rem;
+  margin-top: 1rem;
 }
+.display-photo {
+  width: 3rem;
+  border-radius: 3rem;
+  margin-bottom: 40%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
 .post-header {
 }
 .post-message {

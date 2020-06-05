@@ -1,7 +1,9 @@
 import React from "react";
 
-const DisplayPhoto = ({photo}) => {
-    return <h1 className="display-photo">Photo goes here</h1>
+const DisplayPhoto = ({photoUrl}) => {
+    return <div className="photo-container">
+    <img loading="eager" className="display-photo" src={photoUrl} alt="user profile" />
+    </div>
 };
 
 const PostHeader = ({name, userType, creationTime}) => {
@@ -36,7 +38,7 @@ const DisplayContent = ({content}) => {
 const Post = ({content}) => {
     return (
         <div className="post-container">
-            <DisplayPhoto photo={content.photo} />
+            <DisplayPhoto photoUrl={content.photoUrl} />
             <DisplayContent content={content} />   
         </div>
     )

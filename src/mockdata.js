@@ -3,7 +3,7 @@ export const mockPostsList = [
         id: "1",
         name: "Hope",
         userType: "Author",
-        photo: "src/assets/runningCartoon.png",
+        photoUrl: "https://developer.mozilla.org/static/img/favicon144.png",
         postCreateTime: 1591360993160,
         replies: [{id: "2"}],
         likes: 123,
