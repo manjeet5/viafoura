@@ -36,3 +36,25 @@
     transform: rotate(360deg);
   }
 }
+
+.post-container {
+  background: orchid;
+  display: flex;
+  flex-flow: row nowrap;
+}
+.post-content-container {
+  flex: 6 6 0;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+
+.display-photo {
+  flex: 1 1 0;
+}
+.post-header {
+}
+.post-message {
+}
+.post-footer {
+}
