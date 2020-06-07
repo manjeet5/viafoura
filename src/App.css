@@ -116,3 +116,14 @@
 .downvote {
   transform: rotate(180deg);
 }
+
+.post-container:hover .add-button {
+  color: black;
+}
+
+.post-container:hover .replies-list-button {
+  color: black;
+}
+.post-container:hover .vote-button {
+  color: black;
+}
