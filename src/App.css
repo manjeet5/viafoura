@@ -96,4 +96,23 @@
   padding: 0.5rem 0
 }
 .post-footer {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.add-button, .replies-list-button, .vote-button {
+  background: none;
+  border: none;
+  text-transform: uppercase;
+  color: #9b9b9b;
+  cursor: pointer;
+}
+.upvote, .downvote {
+  width: 0.7rem;
+  fill: #9b9b9b;
+  margin-right: 0.1rem;
+}
+
+.downvote {
+  transform: rotate(180deg);
 }

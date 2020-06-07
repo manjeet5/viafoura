@@ -1,4 +1,8 @@
 import React from "react";
+import upImage from "./upImage.svg";
+
+const UPVOTE = "upvote";
+const DOWNVOTE = "downvote";
 
 const DisplayPhoto = ({photoUrl}) => {
     return <div className="photo-container">
@@ -41,8 +45,16 @@ const PostMessage =({message}) => {
 return <div className="post-message">{message}</div>
 }
 
+const getVoteImg = (className) => <img className={className} src={upImage} alt=""/>;
+
+const getVoteButton = (voteNumber, className) => <button className="vote-button">{getVoteImg(className)}{voteNumber}</button>;
 const PostFooter = ({replies, likes, dislikes }) => {
-    return <div className="post-footer">footer goes here</div>
+    return <div className="post-footer">
+        <button className="add-button">reply</button>
+        <button className="replies-list-button">{replies.length} replies</button>
+        {getVoteButton(likes, UPVOTE)}
+        {getVoteButton(dislikes, DOWNVOTE)}
+    </div>
 };
 
 const DisplayContent = ({content}) => {
