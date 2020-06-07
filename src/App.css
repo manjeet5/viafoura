@@ -52,7 +52,7 @@
 }
 
 .post-header-creation-time:before {
-  content: "•";
+  content: "·";
   padding-right: 0.1rem;
 }
 .post-message {
