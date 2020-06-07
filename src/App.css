@@ -87,10 +87,13 @@
 }
 
 .post-header-creation-time:before {
-  content: "·";
-  font-weight: bold;
+  content: "•";
+  padding-right: 0.1rem;
 }
 .post-message {
+  text-align: left;
+  line-height: 1.5rem;
+  padding: 0.5rem 0
 }
 .post-footer {
 }

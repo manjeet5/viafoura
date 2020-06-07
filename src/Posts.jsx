@@ -27,9 +27,7 @@ const determineTimeDetails = (minutes) => {
     }
 }
 const PostHeader = ({name, userType, creationTime}) => {
-    console.log(creationTime,  Date.now());
     const elapsedTimeInMinutes = (Date.now() - creationTime)/(1000 * 60);
-    console.log("elapsedTime", elapsedTimeInMinutes);
     return (
         <div className="post-header">
             <div className="post-header-name">{name}</div>
@@ -40,7 +38,7 @@ const PostHeader = ({name, userType, creationTime}) => {
 }
 
 const PostMessage =({message}) => {
-    return <div className="post-message">message goes here</div>
+return <div className="post-message">{message}</div>
 }
 
 const PostFooter = ({replies, likes, dislikes }) => {
