@@ -4,13 +4,13 @@ import upImage from "./upImage.svg";
 const UPVOTE = "upvote";
 const DOWNVOTE = "downvote";
 
-const DisplayPhoto = ({photoUrl}) => {
+export const DisplayPhoto = ({photoUrl}) => {
     return <div className="photo-container">
     <img loading="eager" className="display-photo" src={photoUrl} alt="user profile" />
     </div>
 };
 
-const determineTimeDetails = (minutes) => {
+export const determineTimeDetails = (minutes) => {
     const MINUTES_IN_HOUR = 60,
     MINUTES_IN_DAY = 24 * MINUTES_IN_HOUR,
     MINUTES_IN_WEEK = MINUTES_IN_DAY * 7,
@@ -23,14 +23,14 @@ const determineTimeDetails = (minutes) => {
     } else if(minutes < MINUTES_IN_WEEK) {
         return `${Math.floor(minutes/MINUTES_IN_DAY)} DAYS AGO`;
     } else if(minutes < MINUTES_IN_MONTH) {
-        return `${Math.floor(minutes/MINUTES_IN_WEEK)} WEEKS AGO`;
+        return `${Math.floor(minutes/MINUTES_IN_WEEK)} WEEK AGO`;
     } else if(minutes < MINUTES_IN_YEAR) {
         return `${Math.floor(minutes/MINUTES_IN_MONTH)} MONTH AGO`;
     } else {
         return `${Math.floor(minutes/MINUTES_IN_YEAR)} YEAR AGO`;
     }
 }
-const PostHeader = ({name, userType, creationTime}) => {
+export const PostHeader = ({name, userType, creationTime}) => {
     const elapsedTimeInMinutes = (Date.now() - creationTime)/(1000 * 60);
     return (
         <div className="post-header">
@@ -41,14 +41,13 @@ const PostHeader = ({name, userType, creationTime}) => {
     );
 }
 
-const PostMessage =({message}) => {
-return <div className="post-message">{message}</div>
-}
+const PostMessage =({message}) => <div className="post-message">{message}</div>
 
 const getVoteImg = (className) => <img className={className} src={upImage} alt=""/>;
 
 const getVoteButton = (voteNumber, className) => <button className="vote-button">{getVoteImg(className)}{voteNumber}</button>;
-const PostFooter = ({replies, likes, dislikes }) => {
+
+export const PostFooter = ({replies, likes, dislikes }) => {
     return <div className="post-footer">
         <button className="add-button">reply</button>
         <button className="replies-list-button">{replies.length} replies</button>
@@ -57,7 +56,7 @@ const PostFooter = ({replies, likes, dislikes }) => {
     </div>
 };
 
-const DisplayContent = ({content}) => {
+export const DisplayContent = ({content}) => {
     const {
         name,
         userType,
@@ -74,7 +73,7 @@ const DisplayContent = ({content}) => {
         <PostFooter replies={replies} likes={likes} dislikes={dislikes} />
     </div>
 }
-const Post = ({content}) => {
+export const Post = ({content}) => {
     return (
         <div className="post-container">
             <DisplayPhoto photoUrl={content.photoUrl} />
