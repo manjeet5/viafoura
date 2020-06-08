@@ -1,9 +1,10 @@
-# Design decisions
 You will see a simple react app that creates a post with mockdata and is styled as per requirements. 
 
-Please note that the logic to calculate time elapsed for the post is not correct. In the a real project, I would use the moment library to determine the time elapsed
+## Design decisions
+The logic to calculate time elapsed for the post is not correct. In the a real project, I would use the moment library to determine the time elapsed
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Enzyme and jest library are used to test react components
+
 
 ## Available Scripts
 
